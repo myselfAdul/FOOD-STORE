@@ -1,0 +1,32 @@
+header {
+  border-bottom: 1px solid var(--text-color-title);
+}
+
+a {
+  color: var(--text-color-title);
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1em;
+}
+a:hover {
+  background-color: var(--background-color-light);
+  color: var(--text-color-primary);
+}
+
+.container {
+    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+nav ul{
+    margin: 0;
+}
+
+nav ul li a{
+    display: inline-block;
+    padding: 1em;
+}

@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --text-color-title: #8c2929c2;
+  --text-color-primary: #1e1d1d; /* Dark Gray for primary text */
+  --text-color-secondary: #484646; /* Medium Gray for secondary text */
+
+  --background-color-light: #df8b42dc; /* White for light backgrounds */
+  --background-color-dark: #fff200d8; /* Light Gray for dark backgrounds */
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Mulish", system-ui;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
