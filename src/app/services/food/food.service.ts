@@ -8,6 +8,12 @@ import { Food } from '../../shared/models/food';
 export class FoodService {
   constructor() {}
 
+  getAllFoodByTag(tag: string): Food[] {
+    return tag == 'All'
+      ? this.getAllFood()
+      : this.getAllFood().filter((food) => food.tags?.includes(tag));
+  }
+
   getAllFood(): Food[] {
     return [
       {
@@ -18,7 +24,7 @@ export class FoodService {
         favorite: false,
         stars: 4.5,
         imageUrl: 'assets/food1.avif',
-        origins: ['Italy','bd'],
+        origins: ['Italy', 'bd'],
         cookTime: '30 mins',
       },
       {
