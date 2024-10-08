@@ -8,7 +8,7 @@ import { Food } from '../../shared/models/food';
 export class FoodService {
   constructor() {}
 
-  getAll(): Food[] {
+  getAllFood(): Food[] {
     return [
       {
         id: 1,

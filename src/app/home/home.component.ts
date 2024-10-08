@@ -18,7 +18,7 @@ export class HomeComponent {
   constructor(private foodService: FoodService) {}
 
   ngOnInit(): void {
-    this.foods = this.foodService.getAll();
+    this.foods = this.foodService.getAllFood();
   }
 
   searchFoods(): Food[] {
