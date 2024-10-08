@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { FoodService } from '../services/food/food.service';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { Food } from '../shared/models/food';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgFor, FormsModule],
+  imports: [NgIf, NgFor, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -29,5 +29,9 @@ export class HomeComponent {
     return this.foods.filter((food) =>
       food.name.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
+  }
+
+  get hasNoResult(): boolean {
+    return this.searchTerm.length > 0 && this.searchFoods().length === 0;
   }
 }
